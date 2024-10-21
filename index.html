@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -40,7 +41,7 @@
                 <ul>
                     <li class="cart-icon">
                         <a href="#cart">
-                            <i class="fa-solid fa-bag-shopping"></i>
+                            <i style="padding-right:13px" class="fa-solid fa-bag-shopping"></i>
 
                         </a>
                     </li>
@@ -48,8 +49,10 @@
 
                     <li class="profile-icon dropdown">
                         <a href="#" class="dropdown-toggle">
-                            <i class="fa-solid fa-user"></i>
-                            <i class="fa-solid fa-caret-down"></i>
+
+                            <i style="font-size:1.1rem;" class="fa-solid fa-user"></i>
+
+                            <i style="font-size:1.1rem;" class="fa-solid fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="#login">Login</a></li>
@@ -61,7 +64,7 @@
 
                     <li class="menu-button">
                         <a href="menu.html">
-                            <i class="fa-solid fa-bars"></i>
+                            <i style="padding-right:25px" class="fa-solid fa-bars"></i>
                         </a>
                     </li>
 
@@ -76,8 +79,8 @@
         <div class="hero-content">
             <p>Just place the order and enjoy</p>
             <h2>Delicious food at <br>your doorstep.</h2>
-            <p>Order your favorite food in just a few cli. Nobis expedita placeat illo sapiente vero deserunt odit
-                tenetur quos praesentium quaerat onsequatur sed. Reiciendis, incidunt.</p>
+            <p id="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae egestas mi, vel dapibus diam. Mauris malesuada, nisl non rutrum commodo, sem magna.</p>
+
 
             <!-- Search field with button -->
             <div class="search-container">
@@ -93,8 +96,21 @@
     </section>
 
 
+
+
+
+
+
+
     <!-- Menu Section -->
     <section class="menu" id="menu">
+
+
+        <div class="check-delivery">
+            <input placeholder="Your  Address">
+            <button>CHECK FOOD DELIVERY</button>
+
+        </div>
 
         <div class="about">
             <p>Basic info about online food.</p>
@@ -105,21 +121,24 @@
         <div class="about-logos">
             <div class="la-la-logos">
                 <i class="las la-brush"></i>
+                <h4>1052+</h4>
+                <p>Online Orders</p>
             </div>
-            <h4>1052+</h4>
-            <p>Online Orders</p>
+          
 
             <div class="la-la-logos">
                 <i class="las la-pizza-slice"></i>
+                <h4>9800+</h4>
+                <p>Satisfied Customers</p>
             </div>
-            <h4>9800+</h4>
-            <p>Satisfied Customers</p>
+          
 
             <div class="la-la-logos">
                 <i class="las la-mug-hot"></i>
-            </div>
-            <h4>3785+</h4>
+                <h4>3785+</h4>
             <p>Cup of Teas</p>
+            </div>
+            
         </div>
 
 
@@ -133,7 +152,6 @@
             </div>
             <div class="menu-item">
                 <img src="utils/Images/resturant/two.png" alt="Description of Image">
-
                 <div class="restaurant-name">The Fast Food</div>
             </div>
             <div class="menu-item">
@@ -144,7 +162,6 @@
 
             <div class="menu-item">
                 <img src="utils/Images/resturant/four.png" alt="Description of Image">
-
                 <div class="restaurant-name">Eat Frio</div>
             </div>
             <div class="menu-item">
@@ -169,6 +186,33 @@
     </section>
 
 
+    <!--Testinomials Section-->
+
+    <div class="testinomials">
+
+        <div class="clinets">
+
+            <img>
+            <h2>Client Names</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum architecto vero ex veniam nihil. Veritatis voluptate quia sapiente maiores quae repudiandae quis iste iure pariatur quidem numquam dolorum, non illo.</p>
+
+        </div>
+
+        <ul class="caurosle">
+            <li>
+
+            </li>
+        </ul>
+
+
+
+
+    </div>
+
+
+
+
+    <!--download Section-->
     <div class="downloads">
 
         <div class="download-content">
@@ -179,24 +223,22 @@
 
         <div class="download-logo">
             <div class="ios-logo">
-                <a href="https://megaone.acrothemes.com/index-food-delivery.html">
-                    <img src="utils/Images/ios.png">
-                    <div class="download-type">iOS App Store</div>
+                <img src="utils/Images/ios.png">
+                <div class="download-type">iOS App Store</div>
             </div>
 
 
             <div class="android-logo">
-                <a href="https://megaone.acrothemes.com/index-food-delivery.html">
-                    <img src="utils/Images/android.png">
-                    <div class="download-type">Google Play Store</div>
+                <img src="utils/Images/android.png">
+                <div class="download-type">Google Play Store</div>
             </div>
         </div>
     </div>
 
 
 
-   
-     
+
+
     <!--Below Downloads-->
     <section class="info" id="menu">
 
@@ -207,7 +249,11 @@
 
 
         <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quo ex. Voluptatum vitae dicta recusandae doloremque, enim tempora inventore dolorem quam dolore nostrum reiciendis illo sapiente ipsa excepturi. <br> <br>Illo, sapiente?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quam, dolores iusto omnis iste quod amet deserunt minus error deleniti est at illo fugit blanditiis hic distinctio voluptates, obcaecati aperiam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quo ex. Voluptatum vitae dicta recusandae
+            doloremque, enim tempora inventore dolorem quam dolore nostrum reiciendis illo sapiente ipsa excepturi. <br>
+            <br>Illo, sapiente?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quam, dolores iusto
+            omnis iste quod amet deserunt minus error deleniti est at illo fugit blanditiis hic distinctio voluptates,
+            obcaecati aperiam.
         </p>
 
 
@@ -218,7 +264,7 @@
             <p>We have new ideas for<br> your food business.</p>
 
             <div class="la-la-logos">
-                <i class="las la-bicycle"></i>
+                <i id="bicycle" class="las la-bicycle"></i>
             </div>
             <p>Join our amazing<br>delivery staff.</p>
 
@@ -228,6 +274,7 @@
             <p>We love our valued food<br> customers.</p>
         </div>
     </section>
+
 
 
 
@@ -246,6 +293,10 @@
 
         <p>&copy; 2024 Food Delivery. All rights reserved.</p>
     </footer>
+
+    <div id="backtoTop" class="back-to-top">
+        <i class="fas fa-angle-up"></i>
+    </div>
 
     <script src="script.js"></script>
 </body>

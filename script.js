@@ -1,31 +1,4 @@
 
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     const dropdownToggle = document.querySelector('.dropdown-toggle');
-    //     const dropdownMenu = document.querySelector('.dropdown-menu');
-
-    //     // Show the dropdown on click
-    //     dropdownToggle.addEventListener('click', function(event) {
-    //         event.preventDefault(); // Prevent the default link behavior
-    //         dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-    //     });
-
-    //     // Hide the dropdown if an item is clicked
-    //     dropdownMenu.addEventListener('click', function(event) {
-    //         if (event.target.tagName === 'A') {
-    //             dropdownMenu.style.display = 'none'; // Hide dropdown on item click
-    //         }
-    //     });
-
-    //     // Hide the dropdown if clicking outside of it
-    //     document.addEventListener('click', function(event) {
-    //         if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-    //             dropdownMenu.style.display = 'none';
-    //         }
-    //     });
-    // });
-
-
-
 
 // JavaScript to manage dropdown visibility
 const profileIcon = document.querySelector('.profile-icon');
@@ -43,3 +16,26 @@ document.addEventListener('click', (e) => {
         dropdownMenu.style.display = 'none'; // Hide if clicking outside the profile icon
     }
 });
+
+
+
+
+
+
+// Show the "Back to Top" button after scrolling a certain distance
+window.onscroll = function() {
+    const backToTopButton = document.getElementById('backToTop');
+    if (document.body.scroll > 10 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+};
+
+
+
+document.getElementById('backtoTop').onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+
