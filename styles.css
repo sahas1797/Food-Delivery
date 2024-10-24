@@ -5,14 +5,28 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++*/
+/* Responsive Adjustment for larger screens  */
+
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++*/
+/* Responsive Adjustment for 1440  */
+/* Header Section */
+
+
+#mobile{
+    display:none;
 }
 
-/* Header Section */
+@media (max-width: 1440px) {
+
 .header {
     background-color:  #242424;
     color: #dfdfdf;
@@ -37,6 +51,7 @@ body {
 
 .logo {
     padding-top: 10%;
+    padding-left: 40px;
     height: 60px;
     
 }
@@ -59,7 +74,7 @@ body {
     color: white;
     text-decoration: none;
     font-family: Lucida Sans ;
-    font-size:x-large;
+    font-size:large;
     position :relative;
 }
 
@@ -84,9 +99,9 @@ body {
 .user-icons ul{  
     list-style: none;          
     display: flex;
-    gap: 55px;
+    gap: 25px;
     margin: 0;
-    padding: 0;
+    padding-right: 50px;
 }
 
 
@@ -102,6 +117,8 @@ body {
 profile-icon dropdown{
     height: 100px;
 }
+
+
 
 /* Dropdown menu styling */
 .profile-icon .dropdown-menu{
@@ -137,6 +154,11 @@ profile-icon dropdown{
 }
 
 
+/*hiding menu button for larger screens*/
+.menu-button{
+    display:none;
+}
+
 
 
 
@@ -154,7 +176,7 @@ profile-icon dropdown{
     height:100vh;
     background-image: url('utils/Images/burger.png'), url('utils/Images/pizza.png');
     background-size: auto, auto, auto; 
-    background-position: left bottom, 118% center; 
+    background-position: left bottom, 131% 60%; 
     background-repeat: no-repeat; 
     background-blend-mode:normal;
     
@@ -163,8 +185,8 @@ profile-icon dropdown{
 .hero::before {
     content: '';
     position: absolute;
-    top: 25%;
-    left: 18%; 
+    top: 30%;
+    left: 3%; 
     width: 300px; 
     height: 300px; 
     background-image: url('utils/Images/Salad.png'); 
@@ -179,8 +201,8 @@ profile-icon dropdown{
 .hero::after {
     content: '';
     position: absolute;
-    top: 21%; 
-    right: 28%; 
+    top: 30%; 
+    right: 15%; 
     width: 90px; 
     height: 90px; 
     background-image: url('utils/Images/Leaves.png');
@@ -203,21 +225,35 @@ profile-icon dropdown{
 
 
 
-.hero-content h2 {
-    font-size: 5.5rem  !important;
-    margin-bottom: 10px;
-    font-family: "Cookie", cursive;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.1;
-}
+.hero-content {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center; 
+
+    h2 {
+        padding: 40px 0px;
+        font-size: 5.0rem  !important;
+        font-family: "Cookie", cursive;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.1;
+    }
+
+    p {
+        padding-top: 25px;
+        align-items: center;
+        justify-content: center;
+        width:500px;
+        opacity: 50%;
+    }
 
 
-.hero-content p {
-    margin-bottom: 10px;
-    opacity: 50%;
-    
 }
+
 
 .btn {
     background-color: #ff6b6b;
@@ -234,10 +270,12 @@ profile-icon dropdown{
     display: flex;
     justify-content: center; 
     align-items: center; 
+    width:900px;
     max-width: 1000px; 
     margin: 0 auto; 
-    height: 300px; 
+    height: 100px; 
     position: relative; 
+    padding-top: 180px;
 }
 
 .icon-container {
@@ -251,7 +289,7 @@ profile-icon dropdown{
 .search-input {
     width: 100%;
     color: white;
-    padding: 35px 140px 35px 10px; 
+    padding: 25px 140px 35px 10px; 
     border: 1px solid #524f4f;
     border-radius: 55px; 
     outline: none;
@@ -267,17 +305,21 @@ profile-icon dropdown{
     background-color: #ff5722; 
     color: white;
     border: none;
-    padding: 28px 25px;
+    padding: 25px 50px;
     border-radius: 55px; 
     cursor: pointer;
     font-size:1.0rem;
     font-weight:bolder;
+    margin-top: 90px;
 }
 
 .search-btn:hover {
     background-color: #c74221; 
 }
 
+.check-delivery{
+    display: none;
+}
 
 
 
@@ -287,42 +329,108 @@ profile-icon dropdown{
 
 
 
-
-
-
-/* Menu Section */
+/* Menu About  Section */
 .menu {
     background-color: #1b1b1b;
     text-align: center;
-    padding:0px 300px;
-    height:auto;
+    padding: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    h2 {
+        margin: 0 0 20px 0;
+    }
 }
 
-.menu h2 {
-    margin-bottom: 20px;
-}
 
 .menu-items {
-    padding-top: 30px;
+    background-color: #1b1b1b;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 35px; 
+    justify-content: center; 
+    padding: 60px 170px; 
+}
+
+/*abouttt ********************/
+.about-flex{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap:20px;
+    flex-direction: row;
+    width:auto;
+    gap:300px;
+    height: auto;
+    
+    .about{
+    
+        p{
+            color: red; 
+            font-weight: lighter;
+            opacity: 60%;
+            font-size: 1.3rem; 
+            width: auto;
+            margin:0;
+            padding-top: 15px;
+            padding-right: 20px;
+         
+        }
+
+       
+        #bigScreen{
+            padding-top: 40px;
+            padding-right: 30px;
+            font-size: 4.0rem  !important;
+            font-family: "Cookie", cursive;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1;
+            color: white;
+            white-space: normal; 
+        }
+
+       
+    }
     
 }
 
-.menu-item {
-    height: 300px;
-    flex: 0 1 calc(33.333% - 20px); 
-    margin-bottom: 100px;
-    padding: 10px; 
-    text-align: center; 
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
+
+
+.about-logos{
+    display: flex;
+    flex-direction:row;
+    gap:80px;
+    padding-top: 100px;
+    padding-right: 100px;
+
+
+    .la-la-logos{
+        color: rgb(223, 49, 43);
+        font-size: 2.5rem;
+    }
+
+    h4{
+        margin-top: -5px;
+        color: rgb(243, 243, 243);
+        font-size: 1.5rem;
+        font-weight: lighter;
+        opacity: 70%;
+    }
+
+    p{
+        color:white;
+        font-size:1.0rem;
+        opacity: 70%;
+    
+    }
 }
 
-
+.menu-item {
+    text-align: center; /* Center the content inside each menu item */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .restaurant-name{
     margin: 0px;
@@ -334,6 +442,254 @@ profile-icon dropdown{
     text-align: center; 
 }
 
+
+
+.browse-food-div{
+
+    grid-column: span 3;
+    text-align: center;
+    margin-top: 80px;
+
+
+    .browse-food {
+        background-color: rgb(212, 77, 44);
+        color: white;
+        font-weight: bolder;
+        font-size: 0.8rem;
+        border: none;
+        border-radius: 50px; 
+        padding: 20px 50px;
+        cursor: pointer;
+        width:550px;
+    }
+}
+
+
+
+
+
+/*Reviews/Testinomials*************************************/
+.testinomials{
+    height:55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.carousel {
+    height:50vh;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+
+    .carousel-track {
+        justify-content: center;
+        display: flex;
+        width: 100%; 
+        animation: slide 10s infinite;
+
+
+        .carousel-item {
+            flex: 1 0 100%; /* Each item takes 100% width of the container */
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            background-color: #f5f5f5;
+            padding: 50px 0;
+
+            p{
+                width:100px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+    
+}
+
+
+
+
+/* Keyframe animation to move the carousel */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+/* Downloads Scetion*/
+.downloads {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: auto;
+    background-color: #161515; 
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.download-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    text-align: center; 
+    width: 100%; 
+}
+
+.downloads p {
+    padding-top: 90px;
+    color: red; 
+    font-weight: lighter;
+    opacity: 60%;
+    font-size: 1.4rem; 
+    width: 100%; 
+    text-align: center; 
+}
+
+.downloads h2{
+    margin-top: 50px;
+    font-size: 5.0rem  !important;
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    color: white;
+
+
+}
+
+.download-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px; 
+    margin-top: 150px;
+}
+
+
+.ios-logo img{
+    width: 200px; 
+    height: auto;
+}
+
+.android-logo img {
+    width: 200px; 
+    height: 210px;
+}
+
+
+.download-type{
+    margin-top: 50px;
+    color:white;
+    opacity: 50%;
+    font-size: large;
+}
+
+
+
+
+
+/*below Downloads*/
+.info {
+    background-color: #1b1b1b;
+    text-align: center;
+    padding: 100px;
+    
+
+    p{
+        color: white;
+        padding-top: 40px;
+        opacity:60%;
+    }
+}
+
+
+.about-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:300px;
+
+
+    p{  
+        font-size: 1.0rem;
+        width:500px;
+        padding-top: 100px;
+    }
+
+    .about1 {
+        
+    
+        p{
+            color: red;
+            font-weight: lighter;
+            opacity: 60%;
+            font-size: 1.2rem; 
+            width: 100%; 
+            padding-top: 40px;
+            
+            
+        }
+    
+        h2{
+            margin-top: 30px;
+            font-size: 5.0rem  !important;
+            font-family: "Cookie", cursive;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1;
+            color: rgb(233, 232, 232);
+           
+        }
+    }
+}
+
+
+
+
+
+.about1-logos2 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    justify-content: center;
+    gap:165px;
+
+   .la-la-logos{
+    color: rgb(161, 151, 151);
+    font-size: 6.5rem;
+   }
+
+   #bicycle{
+    color: #c74221;
+   }
+
+    p{
+        padding-top: 0px;
+        font-size: 1.3rem;
+    }
+}
 
 
 
@@ -375,12 +731,84 @@ profile-icon dropdown{
     cursor: pointer;
 }
 
+
+
+
+
 /* Footer Section */
 .footer {
-    background-color: #333;
-    color: white;
+    background-color: #141414;
+    color: rgb(212, 212, 212);
     text-align: center;
+    height: auto;
+    font-size: 1.0rem;
+    padding: 100px 10px;
 }
+
+.social-media-icons {
+    justify-content: center;
+    i {
+        font-size: 19px; 
+        color: #f5f5f5; 
+        padding: 30px;
+    }
+}
+
+
+/*back to top*/
+.back-to-top {
+    position: fixed;
+    display: block;
+    bottom: 25px;
+    right: 25px;
+    background-color: #ec4d04;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 100px;
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+
+
+    i {
+        color: rgb(236, 236, 236);
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        
+    }
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -389,12 +817,7 @@ profile-icon dropdown{
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++*/
-
-
-
-
-
-/* Responsive Adjustment */
+/* Responsive Adjustment for Mobile screens */
 
 @media (max-width: 768px) {
     .nav {
@@ -422,9 +845,10 @@ profile-icon dropdown{
     .user-icons ul{  
         list-style: none;          
         display: flex;
-        gap: 20px;
+        gap: 15px;
         margin: 0;
-        padding-left:10px;
+     
+        padding-right: 10px;
     }
     
     .header .container {
@@ -456,40 +880,54 @@ profile-icon dropdown{
 .hero {
     background-color:  #242424;
     color: #f7f7f7;
-    padding: 350px 20px;
+    padding: 300px 20px;
     text-align: center;
     background-image: url('utils/Images/burger.png'), url('utils/Images/pizza.png'); 
-    background-size: 130px 150px, 150px 150px; 
-    background-position: 0% 96%,  112% 90%;
+    background-size: 140px 130px, 150px 150px; 
+    background-position: 00% 95%,  115% 91%;
     background-repeat: no-repeat; 
     background-blend-mode:normal; 
 }
 
 
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 22%; 
+    right: 28%; 
+    width: 90px; 
+    height: 90px; 
+    background-image: url('utils/Images/Leaves.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-origin: center; 
+    animation: rotateImage 5s infinite alternate; 
+}
+
 .hero-content{ 
 
     p {
-        margin-top: -35px;
         margin-bottom: 25px;
         opacity: 50%;
         
     }
 
     #lorem{
-        margin-top: 40px;
+        margin-top:0px;
         opacity: 50%;
-
+        padding-top: 50px;
+        width:auto;
     }
 
 
     h2 {
     font-size:4.5rem  !important;
-    margin-bottom: 20px;
+    padding:0px;
     font-family: "Cookie", cursive;
     font-weight: 400;
     font-style: normal;
     line-height: 1.1;
-    margin-bottom: 25px;
+    
     }
 }
 
@@ -503,6 +941,58 @@ profile-icon dropdown{
     text-align: center;
     padding: 0 20px;
     height:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*abouttt ********************/
+.about-flex{
+    display: flex;
+    flex-direction: column;
+    width:auto;
+    gap:0px;
+    height: auto;
+    
+    .about{
+
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+    
+        p{
+            color: red; 
+            font-weight: lighter;
+            opacity: 60%;
+            font-size: 1.3rem; 
+            width: auto;
+            margin:0;
+            padding-top: 0px;
+            padding-right: 0px;
+    
+         
+        }
+
+        #bigScreen{
+            display: none;
+        }
+    
+        #mobile{
+            display: block;
+            padding-top: 0px;
+            padding-right: 0px;
+            font-size: 50px !important;
+            font-family: "Cookie", cursive;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1;
+            color: rgb(255, 255, 255);
+            margin-top:20px;
+            white-space: nowrap;
+       
+        }
+    }
+    
 }
 
 
@@ -546,34 +1036,12 @@ profile-icon dropdown{
 
 }
 
-.about{
-    padding-top: 40px;
-}
-
-.about p{
-    color: red; 
-    font-weight: lighter;
-    opacity: 60%;
-    font-size: 1.2rem; 
-    width: 100%; 
-    
-}
-
-
-.about h2{
-    margin-top:20px;
-    font-size: 3.0rem  !important;
-    font-family: "Cookie", cursive;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1;
-    color: white;
-}
 .about-logos{
     display: flex;
     flex-direction: column;
-    padding-top: 18px;
-    gap:30px;
+    padding-top: 30px;
+    gap:60px;
+    padding-right: 0px;
 
 
     .la-la-logos{
@@ -582,7 +1050,7 @@ profile-icon dropdown{
     }
 
     h4{
-        margin-top: -5px;
+        margin-top:3px;
         color: rgb(243, 243, 243);
         font-size: 1.5rem;
         font-weight: lighter;
@@ -593,6 +1061,7 @@ profile-icon dropdown{
         color:white;
         font-size:1.0rem;
         opacity: 70%;
+        margin-top: 3px;
     
     }
 }
@@ -600,14 +1069,15 @@ profile-icon dropdown{
 
 .menu-items {
     padding-top: 120px;
+    padding-bottom: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
-    gap:140px;
+    gap:50px;
 }
 
 .menu-item {
-    margin-bottom: -20px;
+    margin-bottom: -5px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -629,6 +1099,13 @@ profile-icon dropdown{
 }
 
 
+
+.browse-food-div{
+
+    grid-column: span 3;
+    text-align: center;
+    margin-top: -10px;
+
 .browse-food {
     display:block;
     margin: 60px 0px 100px 0px;
@@ -643,7 +1120,7 @@ profile-icon dropdown{
     height:fit-content;
     width:400px;
 }
-
+}
 
 /* Testinomials*/
 .testinomials{
@@ -652,7 +1129,7 @@ profile-icon dropdown{
     background-repeat: no-repeat; 
     background-attachment: scroll; 
     background-position: center center; 
-    height: 72vh; 
+    height: 58vh; 
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -662,7 +1139,7 @@ profile-icon dropdown{
   
     
     .carousel li {
-        min-width: 200px; /* Adjust width as needed */
+        min-width: 200px; 
         margin: 0 10px;
         background-color: #141010;
         padding: 20px;
@@ -674,15 +1151,6 @@ profile-icon dropdown{
     }
     
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -753,11 +1221,14 @@ profile-icon dropdown{
 
 
 
+
 /*below Downloads*/
 .info {
     background-color: #1b1b1b;
     text-align: center;
     padding: 50px;
+    display: flex;
+    flex-direction: column;
     
 
     p{
@@ -768,34 +1239,53 @@ profile-icon dropdown{
 }
 
 
-.about1 {
-    padding-top: 30px;
+.about-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:30px;
 
-    p{
-        color: red;
-        font-weight: lighter;
-        opacity: 60%;
-        font-size: 1.2rem; 
-        width: 100%; 
-        
-        
+
+    p{  
+        font-size: 1.0rem;
+        width:auto;
+        padding-top: 0px;
     }
 
-    h2{
-        margin-top: 50px;
-        font-size: 3.0rem  !important;
-        font-family: "Cookie", cursive;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 1;
-        color: rgb(233, 232, 232);
-       
+    .about1 {
+        
+    
+        p{
+            color: red;
+            font-weight: lighter;
+            opacity: 60%;
+            font-size: 1.2rem; 
+            width: 100%; 
+            padding-top: 40px;
+            
+            
+        }
+    
+        h2{
+            margin-top: 30px;
+            font-size: 3.0rem  !important;
+            font-family: "Cookie", cursive;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1;
+            color: rgb(233, 232, 232);
+           
+        }
     }
 }
 
 
+
+
 .about1-logos2 {
-   padding-top: 20px;
+   padding-top: 100px;
+   display: flex;
+    flex-direction: column;
 
    .la-la-logos{
     color: rgb(161, 151, 151);
@@ -850,10 +1340,6 @@ profile-icon dropdown{
         
     }
 }
-
-
-
-
 
 .hero .back-to-top {
     display: none;
